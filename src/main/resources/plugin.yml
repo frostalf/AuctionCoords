@@ -1,0 +1,5 @@
+name: AuctionCoords
+main: me.xsilverfalconx.auctioncoords.AuctionCoords
+version: ${project.version}
+authors: [xsilverfalconx, frostalf]
+description: A plugin that adds basic commands and essential features.
