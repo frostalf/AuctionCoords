@@ -32,8 +32,14 @@ public class CommandManager implements CommandExecutor {
     
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
+        CommandExecutor subCommandAuction = subCommandMap.get("auction");
         
-               if (sender instanceof Player) {
+        if(cmd.getName().equalsIgnoreCase("auction")) {
+            if(args.length == 0) {
+                return subCommandAuction.onCommand(sender, cmd, commandLabel, args);
+            }
+        }
+               /*if (sender instanceof Player) {
                 Player player = (Player) sender;
                 UPlayer uplayer = UPlayer.get(player);
                 World w = player.getWorld();
@@ -85,7 +91,7 @@ public class CommandManager implements CommandExecutor {
                         player.sendMessage("That faction doesn't exist!");
                     }
                 }
-            }
+            }*/
         
         
         return false;

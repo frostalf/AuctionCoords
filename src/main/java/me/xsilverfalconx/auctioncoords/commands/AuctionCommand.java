@@ -1,12 +1,11 @@
 
 package me.xsilverfalconx.auctioncoords.commands;
 
-import com.google.common.collect.Maps;
-import java.util.Map;
 import me.xsilverfalconx.auctioncoords.AuctionCoords;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 /**
  *
@@ -22,6 +21,11 @@ public class AuctionCommand implements CommandExecutor {
     
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
+        
+        if(sender instanceof Player) {
+            Player player = (Player) sender;
+            UPl
+        }
         return false;
     }
 }
